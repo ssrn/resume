@@ -1,0 +1,67 @@
+// Convert pixels to ems
+@function em($pxval, $base: 16px) {
+  @if not unitless($pxval) {
+    $pxval: strip-units($pxval);
+  }
+  @if not unitless($base) {
+    $base: strip-units($base);
+  }
+  @return ($pxval / $base) * 1em;
+}
+
+
+// Convert pixels to rems
+@function rem($pxval) {
+  @if not unitless($pxval) {
+    $pxval: strip-units($pxval);
+  }
+
+  $base: $em-base;
+  @if not unitless($base) {
+    $base: strip-units($base);
+  }
+  @return ($pxval / $base) * 1rem;
+}
+
+
+/// Usage:
+/// Use vars from $media-stack or custom.
+/// h1{
+///   color: #333;
+///   @include media(tablet){
+///     font-size: 1rem;
+///   };
+///   @include media(small, inbetween){
+///     font-size: 1.2rem;
+///   };
+///   @include media(small){
+///     color: #000;
+///   };
+
+@mixin media($group, $id: general) {
+  @each $media in $media-stack {
+    @if($group == map-get($media, group) and $id == map-get($media, id)) {
+      $rule: map-get($media, rule);
+      @media #{$rule} {
+        @content
+      }
+    }
+  }
+}
+
+@mixin mq-max($width) {
+  @media only screen and (max-width: $width){
+    @content;
+  }
+}
+
+@mixin mq-min($width) {
+  @media only screen and (min-width: $width){
+    @content;
+  }
+}
+
+// Aspect ratio
+@mixin aspect-ratio($width, $height) {
+  padding-top: ($height / $width) * 100%;
+}

@@ -1,0 +1,338 @@
+.resume {
+  margin: 15px 0;
+}
+
+.resume-header {
+  background-color: #e6e6e6;
+
+  @include media(xs, max) {
+    position: relative;
+  }
+
+  @include media(sm) {
+    display: table;
+  }
+}
+
+.resume-photo {
+  @include media(sm) {
+    display: table-cell;
+    vertical-align: top;
+  }
+}
+
+.resume-photo__image {
+  display: block;
+}
+
+.resume-header-info {
+  width: 100%;
+  padding: 20px 30px;
+  vertical-align: top;
+
+
+  @include media(sm) {
+    display: table-cell;
+    position: relative;
+  }
+}
+
+.content-editable {
+  display: inline-block;
+  width: 460px;
+  max-width: 100%;
+  margin: 0 -6px;
+  border: 1px solid transparent;
+}
+
+.content-editable__text {
+  padding: 0 6px;
+  cursor: text;
+}
+
+.content-editable__button {
+  padding: 0 6px;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.js-content-edited,
+.js-add-skills-edited {
+  position: relative;
+
+  &:focus {
+    background-color: #fff;
+  }
+
+  .content-editable__text,
+  .content-editable__button {
+    display: none;
+  }
+
+  input {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding: 0 6px;
+    background-color: #e6e6e6;
+    border: none;
+
+    &:focus,
+    &:active {
+      outline: none;
+      background-color: #fff;
+    }
+  }
+}
+
+.js-content-edited {
+  border: 1px solid #bababa;
+  display: inline-block;
+  width: 460px;
+  max-width: 100%;
+  margin: 0 -6px;
+}
+
+.input-icon-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0 3px;
+}
+
+.icon-revert,
+.icon-save {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin: 0 3px;
+  color: #e6e6e5;
+  transition: 0.3s color ease;
+
+  &:hover {
+    color: #999999;
+  }
+}
+
+.resume-header-name {
+  color: #000;
+  font-size: 32px;
+}
+
+.resume-header-country,
+.resume-header-languages {
+  padding: 3px 0;
+
+  .content-editable__text,
+  input {
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  input {
+    color: #4c4c4c;
+  }
+}
+
+.resume-header-skills {
+  margin: 10px -6px;
+}
+
+.skill {
+  display: inline-block;
+  position: relative;
+  padding: 3px 9px;
+  margin: 4px 3px;
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+  border-radius: 1px;
+
+  &:hover {
+    .remove-skill {
+      display: inline-block;
+    }
+  }
+
+  &--strong {
+    background-color: #000;
+  }
+
+  &--intermediate {
+    background-color: #5c5c5c;
+  }
+
+  &--basic {
+    background-color: #a2a2a2;
+  }
+}
+
+.remove-skill {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 1px;
+  margin: -8px 0;
+}
+
+.icon-remove {
+  width: 16px;
+  height: 16px;
+  color: #f00;
+}
+
+.print-page {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  padding: 3px 15px;
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+  background-color: #000;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.add-skills-btn {
+  select {
+    display: none;
+  }
+}
+
+.js-add-skills-edited {
+  input {
+    padding: 2px 6px;
+    font-size: 13px;
+    background-color: #fff;
+    border: 1px solid #00ff00;
+  }
+
+  select {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 33px;
+    margin: -10px 0;
+    font-size: 12px;
+  }
+}
+
+.resume-body {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  border: 1px solid #e6e6e6;
+  border-top: none;
+
+  h2 {
+    text-align: center;
+  }
+
+  ul {
+    padding: 0;
+    list-style-position: inside;
+    text-align: left;
+  }
+}
+
+.resume-block {
+  display: inline-block;
+  width: 25%;
+  min-height: 237px;
+  padding: 20px 10px;
+  font-size: 14px;
+  border-right: 1px solid #e6e6e6;
+  border-top: 1px solid #e6e6e6;
+
+  &:nth-of-type(4n) {
+    border-right: none;
+  }
+
+  @include media (xs, max) {
+    width: 100%;
+    border-right: none;
+  }
+
+  @include media (sm, max) {
+    width: 50%;
+
+    &:nth-of-type(2n) {
+      border-right: none;
+    }
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  b {
+    font-size: 16px;
+  }
+
+  blockquote {
+    height: 100%;
+  }
+
+  .preferred-environment {
+    padding: 0 10px;
+  }
+}
+
+.resume-block-multiple {
+  padding: 0;
+}
+
+.resume-block-multiple__item {
+  padding: 20px 10px;
+
+  &:last-of-type {
+    border-top: 1px solid #e6e6e6;
+  }
+}
+
+.resume-block__desc {
+  font-size: 12px;
+  text-align: center;
+}
+
+.sample-code {
+  position: relative;
+  padding: 0;
+  background: url(../img/code-sample.png);
+  overflow: hidden;
+
+  h2 {
+    margin: 0;
+    padding: 13px 40px;
+    background-color: rgba(255, 255, 255, 0.7);
+    transform: translateY(0);
+    transition: 0.3s transform ease;
+  }
+
+  a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    cursor: pointer;
+    text-indent: -9999px;
+  }
+
+  &:hover {
+    h2 {
+      transform: translateY(-100%);
+    }
+  }
+}
+
+.resume-block__availability {
+  font-size: 30px;
+  font-weight: bold;
+}
+
