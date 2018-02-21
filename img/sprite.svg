@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg"><symbol id="icon-ok" viewBox="0 0 22 22">
+    <path fill="currentColor" d="M22 11c0 6.075-4.924 11-11 11S0 17.075 0 11 4.924 0 11 0s11 4.925 11 11z"/>
+    <path fill="none" stroke="#FFF" stroke-width="2" stroke-miterlimit="10" d="M6.531 10.688l2.875 2.906m4.939-5.135l-5.818 5.666"/>
+</symbol><symbol id="icon-remove" viewBox="0 0 22 22">
+    <path fill="currentColor" d="M22 11c0 6.075-4.924 11-11 11S0 17.075 0 11 4.924 0 11 0s11 4.925 11 11z"/>
+    <path fill="none" stroke="#FFF" stroke-width="2" stroke-miterlimit="10" d="M8.7 6.042l5.288 8.587m-.204-8.587l-5.417 8.583"/>
+</symbol></svg>
