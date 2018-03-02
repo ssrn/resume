@@ -71,6 +71,12 @@
     padding: 0;
   }
 
+  .resume__photo,
+  .resume__info {
+    display: inline-block;
+    max-width: 47%;
+  }
+
   .resume-body {
     border: none;
   }
