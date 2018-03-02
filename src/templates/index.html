@@ -6,118 +6,117 @@ title: Resume
 {% block content %}
 
 <div class="container">
-    <div class="resume">
-        <div class="resume-header">
-            <div class="resume-photo no-print">
-                <img src="../img/josh.jpg" alt="Josh Lucas" class="resume-photo__image">
-            </div>
-            <div class="resume-header-info">
-                <div class="resume-header-name">
-                    <div class="js-content-editable content-editable">
-                        <div class="content-editable__text">John Smith</div>
-                    </div>
-                </div>
-                <div class="resume-header-country">
-                    <div class="js-content-editable content-editable">
-                        <span class="content-editable__text">Portland, Oregon, USA</span>
-                    </div>
-                </div>
-                <div class="resume-header-languages">
-                    <div class="js-content-editable content-editable">
-                        <span class="content-editable__text">English</span>
-                    </div>
-                </div>
-                <div class="resume-header-skills">
-                    <div class="skill skill--strong">
-                        <span>PHP</span>
-                        <div class="remove-skill">{{mixins.icon('remove')}}</div>
-                    </div>
-                    <div class="skill skill--strong">
-                        <span>Ruby</span>
-                        <div class="remove-skill">{{mixins.icon('remove')}}</div>
-                    </div>
-                    <div class="skill skill--intermediate">
-                        <span>Javascript</span>
-                        <div class="remove-skill">{{mixins.icon('remove')}}</div>
-                    </div>
-                    <div class="skill skill--basic">
-                        <span>Actionscript</span>
-                        <div class="remove-skill">{{mixins.icon('remove')}}</div>
-                    </div>
-                </div>
-                <div class="add-skills-btn no-print">
-                    <div class="js-add-skills content-editable">
-                        <div class="content-editable__button">Add skills</div>
-                        <select>
-                            <option value="strong">Strong</option>
-                            <option value="intermediate">Intermediate</option>
-                            <option value="basic">Basic</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="print-page no-print">Print this page</div>
-            </div>
+  <div class="resume">
+    <div class="resume__header">
+      <div class="resume__photo no-print">
+        <img src="img/josh.jpg" alt="Josh Lucas" class="resume__photo-image">
+      </div>
+      <div class="resume__info">
+        <div class="resume__name">
+          <div class="editable js-editable">
+            <div class="editable__text">John Smith</div>
+          </div>
         </div>
-        <div class="resume-body">
-            <div class="resume-block">
-                <h2>Portfolio</h2>
-                <div class="resume-block__desc">Php, Ruby, Javascript</div>
-                <ul>
-                    <li><b>NavalPlan</b>, PHP, Ruby</li>
-                    <li><b>MyTime</b>, Javascript</li>
-                    <li><b>Formidable</b>, PHP, Ruby</li>
-                    <li><b>MyTime</b>, Javascript</li>
-                    <li><b>Moonsoon</b>, Javascript</li>
-                </ul>
-            </div>
-            <div class="resume-block">
-                <h2>Experience</h2>
-                <ul>
-                    <li><b>PHP</b>, 6 years</li>
-                    <li><b>Ruby</b>, 7 years</li>
-                    <li><b>Javascript</b>, 4 years</li>
-                    <li><b>Actionscript</b>, 3 years</li>
-                </ul>
-            </div>
-            <div class="resume-block sample-code">
-                <h2>Sample code and algorithms</h2>
-                <a href="#"></a>
-            </div>
-            <div class="resume-block resume-block-multiple">
-                <div class="resume-block-multiple__item">
-                    <h2>Availability</h2>
-                    <div class="resume-block__availability">Full-time</div>
-                </div>
-
-                <div class="resume-block-multiple__item"><h2>
-                    Preferred environment</h2>
-                    <p class="preferred-environment">Git, GitHub, vim, emacs, Jenkins, Mac Os X</p>
-                </div>
-            </div>
-            <div class="resume-block">
-                <h2>The most amazing ...</h2>
-                <blockquote>
-                    <p>...Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore</p>
-                    <footer>- <cite>Martin</cite></footer>
-                </blockquote>
-            </div>
-            <div class="resume-block">
-                <h2>In clients I look for ...</h2>
-                <blockquote>
-                    <p>...Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-                    <footer>- <cite>Martin</cite></footer>
-                </blockquote>
-            </div>
-            <div class="resume-block"></div>
-            <div class="resume-block">
-                <h2>Note</h2>
-                <blockquote>
-                    <p>...Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-                </blockquote>
-            </div>
+        <div class="resume__country">
+          <div class="editable js-editable">
+            <span class="editable__text">Portland, Oregon, USA</span>
+          </div>
         </div>
+        <div class="resume__languages">
+          <div class="editable js-editable">
+            <span class="editable__text">English</span>
+          </div>
+        </div>
+        <div class="resume__skills">
+          <div class="skill skill--strong">
+            <span>PHP</span>
+            <div class="remove-skill">{{mixins.icon('remove')}}</div>
+          </div>
+          <div class="skill skill--strong">
+            <span>Ruby</span>
+            <div class="remove-skill">{{mixins.icon('remove')}}</div>
+          </div>
+          <div class="skill skill--intermediate">
+            <span>Javascript</span>
+            <div class="remove-skill">{{mixins.icon('remove')}}</div>
+          </div>
+          <div class="skill skill--basic">
+            <span>Actionscript</span>
+            <div class="remove-skill">{{mixins.icon('remove')}}</div>
+          </div>
+        </div>
+        <div class="add-skills no-print">
+          <div class="js-add-skills editable">
+            <div class="add-skills__btn">Add skills</div>
+            <select>
+              <option value="strong">Strong</option>
+              <option value="intermediate">Intermediate</option>
+              <option value="basic">Basic</option>
+            </select>
+          </div>
+        </div>
+        <div class="print-page no-print">Print this page</div>
+      </div>
     </div>
+    <div class="resume__body">
+      <div class="resume-block">
+        <h2>Portfolio</h2>
+        <div class="resume-block__desc">Php, Ruby, Javascript</div>
+        <ul>
+          <li><b>NavalPlan</b>, PHP, Ruby</li>
+          <li><b>MyTime</b>, Javascript</li>
+          <li><b>Formidable</b>, PHP, Ruby</li>
+          <li><b>MyTime</b>, Javascript</li>
+          <li><b>Moonsoon</b>, Javascript</li>
+        </ul>
+      </div>
+      <div class="resume-block">
+        <h2>Experience</h2>
+        <ul>
+          <li><b>PHP</b>, 6 years</li>
+          <li><b>Ruby</b>, 7 years</li>
+          <li><b>Javascript</b>, 4 years</li>
+          <li><b>Actionscript</b>, 3 years</li>
+        </ul>
+      </div>
+      <div class="resume-block sample-code">
+        <h2>Sample code and algorithms</h2>
+        <a href="#"></a>
+      </div>
+      <div class="resume-block resume-block-multiple">
+        <div class="resume-block-multiple__item">
+          <h2>Availability</h2>
+          <div class="resume-block__availability">Full-time</div>
+        </div>
+
+        <div class="resume-block-multiple__item"><h2>
+          Preferred environment</h2>
+          <p class="preferred-environment">Git, GitHub, vim, emacs, Jenkins, Mac Os X</p>
+        </div>
+      </div>
+      <div class="resume-block">
+        <h2>The most amazing ...</h2>
+        <blockquote>
+          <p>...Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+          <footer>- <cite>Martin</cite></footer>
+        </blockquote>
+      </div>
+      <div class="resume-block">
+        <h2>In clients I look for ...</h2>
+        <blockquote>
+          <p>...Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+          <footer>- <cite>Martin</cite></footer>
+        </blockquote>
+      </div>
+      <div class="resume-block"></div>
+      <div class="resume-block">
+        <h2>Note</h2>
+        <blockquote>
+          <p>...Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+        </blockquote>
+      </div>
+    </div>
+  </div>
 </div>
 
 {% endblock %}

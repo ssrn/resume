@@ -2,7 +2,7 @@
   margin: 15px 0;
 }
 
-.resume-header {
+.resume__header {
   background-color: #e6e6e6;
 
   @include media(xs, max) {
@@ -14,18 +14,18 @@
   }
 }
 
-.resume-photo {
+.resume__photo {
   @include media(sm) {
     display: table-cell;
     vertical-align: top;
   }
 }
 
-.resume-photo__image {
+.resume__photo-image {
   display: block;
 }
 
-.resume-header-info {
+.resume__info {
   width: 100%;
   padding: 20px 30px;
   vertical-align: top;
@@ -37,7 +37,7 @@
   }
 }
 
-.content-editable {
+.editable {
   display: inline-block;
   width: 460px;
   max-width: 100%;
@@ -45,13 +45,13 @@
   border: 1px solid transparent;
 }
 
-.content-editable__text {
+.editable__text {
   padding: 0 6px;
   cursor: text;
 }
 
-.content-editable__button {
-  padding: 0 6px;
+.add-skills__btn {
+  padding: 4px 7px;
   cursor: pointer;
 
   &:hover {
@@ -59,16 +59,23 @@
   }
 }
 
-.js-content-edited,
-.js-add-skills-edited {
+.edited {
+  input {
+    padding: 0 6px;
+    border: none;
+  }
+}
+
+.edited,
+.js-add-skills--clicked {
   position: relative;
 
   &:focus {
     background-color: #fff;
   }
 
-  .content-editable__text,
-  .content-editable__button {
+  .editable__text,
+  .add-skills__btn {
     display: none;
   }
 
@@ -76,35 +83,27 @@
     display: block;
     position: relative;
     width: 100%;
-    padding: 0 6px;
-    background-color: #e6e6e6;
-    border: none;
-
-    &:focus,
-    &:active {
-      outline: none;
-      background-color: #fff;
-    }
+    outline: none;
+    background-color: #fff;
   }
 }
 
-.js-content-edited {
+.edited {
   border: 1px solid #bababa;
-  display: inline-block;
-  width: 460px;
-  max-width: 100%;
-  margin: 0 -6px;
 }
 
-.input-icon-wrap {
+.icons__wrap {
+  display: flex;
+  align-items: center;
   position: absolute;
   top: 0;
   right: 0;
+  height: 100%;
   margin: 0 3px;
 }
 
-.icon-revert,
-.icon-save {
+.icon--revert,
+.icon--save {
   display: inline-block;
   width: 22px;
   height: 22px;
@@ -113,21 +112,26 @@
   transition: 0.3s color ease;
 
   &:hover {
-    color: #999999;
+    color: #999;
   }
 }
 
-.resume-header-name {
+.resume__name {
   color: #000;
   font-size: 32px;
 }
 
-.resume-header-country,
-.resume-header-languages {
-  padding: 3px 0;
+.editable__text {
+  display: inline-block;
+}
 
-  .content-editable__text,
+.resume__country,
+.resume__languages {
+  margin-top: 3px;
+
+  .editable__text,
   input {
+    padding: 3px 6px;
     font-size: 15px;
     font-weight: bold;
   }
@@ -135,9 +139,15 @@
   input {
     color: #4c4c4c;
   }
+
+  .icon--revert,
+  .icon--save {
+    width: 20px;
+    height: 20px;
+  }
 }
 
-.resume-header-skills {
+.resume__skills {
   margin: 10px -6px;
 }
 
@@ -178,7 +188,7 @@
   margin: -8px 0;
 }
 
-.icon-remove {
+.icon--remove {
   width: 16px;
   height: 16px;
   color: #f00;
@@ -197,22 +207,14 @@
   cursor: pointer;
 }
 
-.add-skills-btn {
+.add-skills {
+  input {
+    padding: 3px 6px;
+    border: 1px solid transparent;
+  }
+
   select {
     display: none;
-  }
-}
-
-.js-add-skills-edited {
-  input {
-    padding: 2px 6px;
-    font-size: 13px;
-    background-color: #fff;
-    border: 1px solid #00ff00;
-  }
-
-  select {
-    display: inline-block;
     position: absolute;
     top: 50%;
     right: 33px;
@@ -221,7 +223,18 @@
   }
 }
 
-.resume-body {
+.js-add-skills--edited {
+  input {
+    background-color: #fff;
+    border: 1px solid #00ff00;
+  }
+
+  select {
+    display: inline-block;
+  }
+}
+
+.resume__body {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
